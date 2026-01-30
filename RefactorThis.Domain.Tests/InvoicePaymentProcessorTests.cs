@@ -113,8 +113,7 @@ namespace RefactorThis.Domain.Tests
         }
 
         [Test]
-        public void
-            ProcessPayment_Should_ReturnFailureMessage_When_NoPartialPaymentExistsAndAmountPaidExceedsInvoiceAmount()
+        public void ProcessPayment_Should_ReturnFailureMessage_When_NoPartialPaymentExistsAndAmountPaidExceedsInvoiceAmount()
         {
             var repo = new InvoiceRepository();
             var invoice = new Invoice(repo)
@@ -168,8 +167,7 @@ namespace RefactorThis.Domain.Tests
         }
 
         [Test]
-        public void
-            ProcessPayment_Should_ReturnFullyPaidMessage_When_NoPartialPaymentExistsAndAmountPaidEqualsInvoiceAmount()
+        public void ProcessPayment_Should_ReturnFullyPaidMessage_When_NoPartialPaymentExistsAndAmountPaidEqualsInvoiceAmount()
         {
             var repo = new InvoiceRepository();
             var invoice = new Invoice(repo)
@@ -193,8 +191,7 @@ namespace RefactorThis.Domain.Tests
         }
 
         [Test]
-        public void
-            ProcessPayment_Should_ReturnPartiallyPaidMessage_When_PartialPaymentExistsAndAmountPaidIsLessThanAmountDue()
+        public void ProcessPayment_Should_ReturnPartiallyPaidMessage_When_PartialPaymentExistsAndAmountPaidIsLessThanAmountDue()
         {
             var repo = new InvoiceRepository();
             var invoice = new Invoice(repo)
@@ -224,8 +221,7 @@ namespace RefactorThis.Domain.Tests
         }
 
         [Test]
-        public void
-            ProcessPayment_Should_ReturnPartiallyPaidMessage_When_NoPartialPaymentExistsAndAmountPaidIsLessThanInvoiceAmount()
+        public void ProcessPayment_Should_ReturnPartiallyPaidMessage_When_NoPartialPaymentExistsAndAmountPaidIsLessThanInvoiceAmount()
         {
             var repo = new InvoiceRepository();
             var invoice = new Invoice(repo)
